@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,11 +25,11 @@ public class ColorMeshPair
 
 
 /// <summary>
-/// Singleton used throghout the game to access 
-/// game objects and resources.
+/// Singleton used throughout the game to set game object colors.
 /// </summary>
 public class SC_ColorsManager : MonoBehaviour
 {
+
     #region Singleton
     private static SC_ColorsManager instance;
     public static SC_ColorsManager Instance
@@ -51,37 +50,34 @@ public class SC_ColorsManager : MonoBehaviour
     }
     #endregion
 
+
     #region Variables
 
-    // List of color-mesh pairs to be set up in the Inspector
-    public List<ColorMeshPair> colorPawnMeshs = new();
     /// <summary>
-    /// Mapping pawn colors to meshes.
+    /// Mapping colors to pawn meshes.
     /// </summary>
     private Dictionary<ColorOptions, Mesh> pawnMeshs;
 
-    // List of color-mesh pairs to be set up in the Inspector
-    public List<ColorMeshPair> colorBarrierMeshs = new();
     /// <summary>
-    /// Mapping barrier colors to meshes.
+    /// Mapping colors to barrier meshes.
     /// </summary>
     private Dictionary<ColorOptions, Mesh> barrierMeshs;
 
     #endregion
 
-    #region API
 
-    public Mesh GetBarrierMesh(ColorOptions color)
+    #region Methods
+    private Mesh GetBarrierMesh(ColorOptions color)
     {
         if (barrierMeshs == null || !barrierMeshs.ContainsKey(color))
         {
             Debug.LogError("Failed to Get barrier Mesh!");
             return null;
         }
-        return barrierMeshs[color]; 
+        return barrierMeshs[color];
     }
 
-    public Mesh GetPawnMesh(ColorOptions color)
+    private Mesh GetPawnMesh(ColorOptions color)
     {
         if (pawnMeshs == null || !pawnMeshs.ContainsKey(color))
         {
@@ -91,6 +87,11 @@ public class SC_ColorsManager : MonoBehaviour
         return pawnMeshs[color];
     }
 
+    #endregion
+
+
+    #region API
+
     public void SetBarrierColor(GameObject obj, ColorOptions color)
     {
         Mesh mesh = GetBarrierMesh(color);
@@ -99,8 +100,11 @@ public class SC_ColorsManager : MonoBehaviour
             Debug.LogError("Failed to set barrier color!");
             return;
         }
-        MeshFilter filter = obj.InitComponent<MeshFilter>();
-        filter.mesh = mesh;
+        foreach (var _filter in obj.GetComponentsInChildren<MeshFilter>())
+        {
+            if (_filter == null) continue;
+            _filter.mesh = mesh;
+        }
     }
 
     public void SetPawnColor(GameObject obj, ColorOptions color)
@@ -108,7 +112,7 @@ public class SC_ColorsManager : MonoBehaviour
         Mesh mesh = GetPawnMesh(color);
         if (mesh == null || obj == null)
         {
-            Debug.LogError("Failed to set pawn color!");
+            Debug.LogError("Failed to set pawn color!\nmesh="+mesh+"\nobj="+obj);
             return;
         }
         MeshFilter filter = obj.InitComponent<MeshFilter>();
@@ -131,11 +135,13 @@ public class SC_ColorsManager : MonoBehaviour
     private void InitBarrierMeshs()
     {
         barrierMeshs = new();
-        foreach (var pair in colorBarrierMeshs)
+        Mesh[] _barrierMeshs = Resources.LoadAll<Mesh>("Meshes/Barriers");
+        foreach (var _mesh in _barrierMeshs)
         {
-            if (!barrierMeshs.ContainsKey(pair.color))
+            if (Enum.TryParse(_mesh.name.Replace("Mesh_Barrier_", ""), out ColorOptions color) &&
+                !barrierMeshs.ContainsKey(color))
             {
-                barrierMeshs.Add(pair.color, pair.mesh);
+                barrierMeshs.Add(color, _mesh);
             }
         }
     }
@@ -143,11 +149,13 @@ public class SC_ColorsManager : MonoBehaviour
     private void InitPawnMeshs()
     {
         pawnMeshs = new();
-        foreach (var pair in colorPawnMeshs)
+        Mesh[] _pawnMeshs = Resources.LoadAll<Mesh>("Meshes/Pawns");
+        foreach (var _mesh in _pawnMeshs)
         {
-            if (!pawnMeshs.ContainsKey(pair.color))
+            if (Enum.TryParse(_mesh.name.Replace("Mesh_Pawn_", ""), out ColorOptions color) && 
+                !pawnMeshs.ContainsKey(color))
             {
-                pawnMeshs.Add(pair.color, pair.mesh);
+                pawnMeshs.Add(color, _mesh);
             }
         }
     }
