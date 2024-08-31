@@ -44,7 +44,7 @@ To build and run this project, you will need:
 #### Steps
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/quoridor-unity.git
+   git clone https://github.com/whyt1/Assignment_YamTamim.git
    ```
 2. **Open the project in Unity:**
    - Launch Unity Hub and select the project folder.
