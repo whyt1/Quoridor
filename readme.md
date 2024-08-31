@@ -23,11 +23,11 @@ The primary goal of this project is to demonstrate the application of game devel
 
 ## Getting Started
 
-## Play Online
+### Play Online
 
 [Play Quoridor Online](https://your-gitpages-link)
 
-## Download
+### Download
 
 You can download the latest version of Quoridor for various platforms from the links below:
 
@@ -36,12 +36,12 @@ You can download the latest version of Quoridor for various platforms from the l
 
 ### Installation
 
-### Prerequisites
+#### Prerequisites
 
 To build and run this project, you will need:
 
 - **Unity 2022.3 LTS** (or later)
-
+#### Steps
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/quoridor-unity.git
