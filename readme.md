@@ -1,7 +1,3 @@
-Here's a draft of a README for your GitHub project:
-
----
-
 # Quoridor - Unity Multiplayer Turn-Based Game
 
 Welcome to the **Quoridor** project! This repository contains the source code for a Unity-based, online multiplayer version of the classic board game Quoridor. The project was developed as part of a summer course in Unity, focusing on implementing advanced game mechanics, AI algorithms, and networking features.
