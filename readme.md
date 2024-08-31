@@ -7,7 +7,7 @@ Welcome to the **Quoridor** project! This repository contains the source code fo
 ### Play Online
 
 [Play Quoridor Online](https://quoridor-webgl.netlify.app/)
-- **NO MULTIPLAYER** https confilct in hosting service
+- **NO MULTIPLAYER** (will be fixed in the future)
    
 ### Download
 
