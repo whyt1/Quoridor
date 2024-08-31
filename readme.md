@@ -2,6 +2,20 @@
 
 Welcome to the **Quoridor** project! This repository contains the source code for a Unity-based, online multiplayer version of the classic board game Quoridor. The project was developed as part of a summer course in Unity, focusing on implementing advanced game mechanics, AI algorithms, and networking features.
 
+## Getting Started
+
+### Play Online
+
+[Play Quoridor Online](https://quoridor-webgl.netlify.app/)
+- **NO MULTIPLAYER** https confilct in hosting service
+   
+### Download
+
+You can download the latest version of Quoridor for various platforms from the links below:
+
+- **PC:** [Download Quoridor for PC](https://github.com/whyt1/Quoridor/releases/download/PC_Build/Quoridor._PC.rar)
+- **Android:** [Download Quoridor for Android](https://github.com/whyt1/Quoridor/releases/download/Android_Build/Quoridor_Android.apk)
+
 ## Project Overview
 
 ### Objective
@@ -21,19 +35,10 @@ The primary goal of this project is to demonstrate the application of game devel
 - **Online Multiplayer:** Play against other players online, with real-time game synchronization via the Wrapapp API.
 - **Custom Game Logic:** The game includes custom logic for parsing and handling game data, ensuring a seamless multiplayer experience.
 
-## Getting Started
+## How to Play
 
-### Play Online
-
-[Play Quoridor Online](https://quoridor-webgl.netlify.app/)
-- **NO MULTIPLAYER** https confilct in hosting service
-   
-### Download
-
-You can download the latest version of Quoridor for various platforms from the links below:
-
-- **PC:** [Download Quoridor for PC](https://github.com/whyt1/Quoridor/releases/download/PC_Build/Quoridor._PC.rar)
-- **Android:** [Download Quoridor for Android](https://github.com/whyt1/Quoridor/releases/download/Android_Build/Quoridor_Android.apk)
+- **Single Player:** Play against the AI, which will challenge you with its strategic barrier placement and movement.
+- **Multiplayer:** Invite a friend or join a random match online. Take turns placing barriers and moving your pawn until one player reaches the other side.
 
 ### Installation
 
@@ -57,11 +62,6 @@ To build and run this project, you will need:
 4. **Build and Run:**
    - Choose your target platform and build the game.
    - Test the game locally or deploy it to your preferred platform.
-
-## How to Play
-
-- **Single Player:** Play against the AI, which will challenge you with its strategic barrier placement and movement.
-- **Multiplayer:** Invite a friend or join a random match online. Take turns placing barriers and moving your pawn until one player reaches the other side.
 
 ## Technical Details
 
