@@ -40,14 +40,14 @@ The primary goal of this project is to demonstrate the application of game devel
 - **Single Player:** Play against the AI, which will challenge you with its strategic barrier placement and movement.
 - **Multiplayer:** Invite a friend or join a random match online. Take turns placing barriers and moving your pawn until one player reaches the other side.
 
-### Installation
+## Installation
 
-#### Prerequisites
+### Prerequisites
 
 To build and run this project, you will need:
 
 - **Unity 2022.3 LTS** (or later)
-#### Steps
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/whyt1/Assignment_YamTamim.git
