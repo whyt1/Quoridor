@@ -73,7 +73,10 @@ crashlytics-build.properties
 Assets/TextMesh Pro/Shaders/TMPro.cginc.meta
 
 # TextMesh Pro auto-generated Assets 
-Assets/TextMesh Pro
+# Assets/TextMesh Pro
 
 # Testing mock C# program
 /MockCProgram
+
+# VS Code settings
+/.vscode

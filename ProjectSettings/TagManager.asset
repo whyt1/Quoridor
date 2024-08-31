@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ColorsManager
+  - Square
+  - GameLogic
+  - GameData
   - GamePieces
+  - UnityObject
   layers:
   - Default
   - TransparentFX
