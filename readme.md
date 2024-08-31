@@ -25,14 +25,15 @@ The primary goal of this project is to demonstrate the application of game devel
 
 ### Play Online
 
-[Play Quoridor Online](https://your-gitpages-link)
-
+[Play Quoridor Online](https://quoridor-webgl.netlify.app/)
+- **NO MULTIPLAYER** https confilct in hosting service
+   
 ### Download
 
 You can download the latest version of Quoridor for various platforms from the links below:
 
-- **PC:** [Download Quoridor for PC](https://your-link-to-PC-build)
-- **Android:** [Download Quoridor for Android](https://your-link-to-android-build)
+- **PC:** [Download Quoridor for PC](https://github.com/whyt1/Quoridor/releases/download/PC_Build/Quoridor._PC.rar)
+- **Android:** [Download Quoridor for Android](https://github.com/whyt1/Quoridor/releases/download/Android_Build/Quoridor_Android.apk)
 
 ### Installation
 
