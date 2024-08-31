@@ -56,10 +56,7 @@ To build and run this project, you will need:
    - Launch Unity Hub and select the project folder.
    - Ensure that all dependencies are properly loaded.
 
-3. **Configure the Wrapapp API:**
-   - Insert your Wrapapp API key into the appropriate field in the `GameManager` script.
-
-4. **Build and Run:**
+3. **Build and Run:**
    - Choose your target platform and build the game.
    - Test the game locally or deploy it to your preferred platform.
 
