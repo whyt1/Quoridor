@@ -2,6 +2,12 @@
 
 Welcome to the **Quoridor** project! This repository contains the source code for a Unity-based, online multiplayer version of the classic board game Quoridor. The project was developed as part of a summer course in Unity, focusing on implementing advanced game mechanics, AI algorithms, and networking features.
 
+## Videos
+- **[My Quoridor Game - Play Test 4](https://youtu.be/Dg_5eOrgC2I)**
+- **[My Quoridor Game - Play Test 3](https://youtu.be/LhViRORuP9k)**
+- **[My Quoridor Game - Play Test 2](https://youtu.be/LMgkviXvLJg)**
+- **[My Quoridor Game - Play Test 1](https://youtu.be/PPEXbibL-V0)**
+
 ## Getting Started
 
 ### Play Online
